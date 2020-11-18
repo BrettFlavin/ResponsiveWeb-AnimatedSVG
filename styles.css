@@ -15,10 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-size: 1.6rem;
-  font-family: var(--main-font), sans-serif;
-}
+body {}
 
 a {
   text-decoration: none;
@@ -32,7 +29,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 2;
   width: 100%;
 }
 
@@ -49,12 +46,15 @@ section {
   overflow: hidden;
 }
 
+/* font awesome icons */
+
 i.fas, i.fab {
   color: rgb(182, 66, 37);
   font-size: 4rem;
+  text-shadow: 0px 0px 5px rgba(226, 202, 182, 1);
 }
 
-/* NAV */
+/**************** N A V I G A T I O N  ****************/
 
 .nav {
   display: flex;
@@ -69,7 +69,7 @@ i.fas, i.fab {
 }
 
 .nav-item {
-  margin-right: 2rem;
+  margin-right: 5rem;
   letter-spacing: 2px;
   margin-left: -2px;
 }
@@ -84,14 +84,15 @@ i.fas, i.fab {
   font-family: var(--body-font);
   text-transform: uppercase;
   color: #FFF;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
-.nav-link:focus, .nav-link:hover {
+.nav-link:focus, .nav-link:hover, .nav-link:active {
   color: #000000;
   opacity: .5;
 }
 
-/* MAIN CONTENT */
+/***************** M A I N section *****************/
 
 .main {
   width: 100%;
@@ -105,13 +106,15 @@ i.fas, i.fab {
   z-index: 1;
 }
 
+/* bg pattern */
+
 .main::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: inherit;
-  height: 100vh;
+  height: 100%;
   background-image: url("images/texture.png");
   background-size: cover;
   z-index: -1;
@@ -121,6 +124,7 @@ i.fas, i.fab {
   margin-top: 10%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
   justify-items: center;
   gap: 30px;
 }
@@ -128,38 +132,50 @@ i.fas, i.fab {
 .content-details {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
 .content-details>h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: var(--main-font);
   color: rgb(131, 28, 28);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
   text-align: left;
 }
 
-.content-details .description {
-  color: rgba(255, 255, 255, .7);
+.content-details>p {
+  font-size: 2rem;
+  font-family: var(--main-font), sans-serif;
+  color: rgba(226, 202, 182, 1);
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
+  letter-spacing: 1px;
+  margin-left: -1px;
   text-align: justify;
   justify-content: center;
   margin: 2rem auto;
 }
 
-/* EMAIL + BUTTON */
+/* styling for both the text field and the btn */
 
-.search input {
+.email {
+  text-align: center;
+  width: 100%;
+}
+
+.email input {
   border: none;
   border-radius: 5rem;
   padding: 1rem;
   outline: none;
+  font-size: 1.6rem;
 }
 
-.search-box {
+.email-box {
   width: calc(100% - .5rem);
 }
 
-.search-btn {
+.email-btn {
   width: 8rem;
   margin-left: -8rem;
   background-image: linear-gradient(to bottom, #200122, #6f0000);
@@ -167,11 +183,11 @@ i.fas, i.fab {
   cursor: pointer;
 }
 
-.search-btn:hover {
+.email-btn:hover {
   background-image: linear-gradient(to top, #200122, #6f0000);
 }
 
-/* SOCIAL MEDIA icons + links */
+/* social media  */
 
 .social-links {
   display: flex;
@@ -190,30 +206,41 @@ i.fas, i.fab {
   margin-right: 0;
 }
 
+/* 
 .social-links .link i:active, .social-links .link i:hover {
   opacity: .4;
-}
+} */
 
-/* animated alien SVG image */
+/* container for animated SVG image */
 
 .image-group {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
+  width: 100%;
 }
+
+/* SVG has #ids to animate aliens, beams, lights and saucer*/
 
 .image-group .alien-abduction {
   width: 100%;
-  position: absolute;
-  z-index: 5000;
+  height: auto;
+  z-index: 2;
 }
 
-/* CSS Animations */
+/*********************************** S V G for animation ***********************************/
+
+/* the SVG that is located directly inline in the HTML 'image-group' class*/
+
+/* animation that brings the saucer (and its components) 
+   down into view when the page loads */
 
 #beams, #lights, #saucer {
-  animation: move-saucer-up 1.7s ease;
+  animation: move-saucer-down 1.7s ease;
 }
+
+/* animation for the "aduction beam" effect gets applied 
+   with a delay to each child in the SVG path */
 
 #beams path {
   opacity: 0;
@@ -260,6 +287,9 @@ i.fas, i.fab {
   animation-delay: 4.9s;
 }
 
+/* animation for 'lights' on top of saucer gets applied with a 
+  delay to each child in the SVG path for a twinkling effect */
+
 #lights path {
   opacity: 0;
   fill: #FFF;
@@ -286,13 +316,82 @@ i.fas, i.fab {
   animation-delay: .5s;
 }
 
+/* animate dome here */
+
 #saucer-dome {}
+
+/* animate a small strip on top of saucer dome 
+  for a transparent effect  here*/
 
 #saucer-dome-transparent {}
 
+/* animate saucer body  here */
+
 #saucer-body {}
 
-#saucer-front {}
+/* animate bottom of saucer here */
+
+#saucer-bottom {}
+
+/********************* Media Queries *********************/
+
+/* layout for screens less than 490px */
+
+@media screen and (max-width: 490px) {
+  .nav {
+    height: 3rem;
+  }
+  .nav-item {
+    margin-right: 2rem;
+  }
+  .nav-link {
+    font-size: 1.4rem;
+  }
+  .content {
+    margin-top: 2rem;
+    grid-template-columns: 1fr;
+  }
+  .content-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .content-details>p {
+    font-size: 1.6rem;
+    letter-spacing: 0;
+    margin: 0 0 1rem 0;
+    padding: 1rem 3.5rem;
+  }
+  .content-details>h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  i.fas, i.fab {
+    font-size: 2.5rem;
+  }
+  .email input {
+    font-size: 1.4rem;
+  }
+  .email-box {
+    width: calc(70% - .5rem);
+  }
+  .email-btn {
+    width: 8rem;
+    margin-left: -8rem;
+    background-image: linear-gradient(to bottom, #200122, #6f0000);
+    color: #FFF;
+    cursor: pointer;
+  }
+  .social-links {
+    max-width: 50%;
+    margin-top: 2rem;
+  }
+}
+
+/********************* A N I M A T I O N S *********************/
+
+/* animation for the saucer 'abduction beam' lights */
 
 @keyframes light-up-beams {
   from {
@@ -305,7 +404,9 @@ i.fas, i.fab {
   }
 }
 
-@keyframes move-saucer-up {
+/* animation to move saucer down */
+
+@keyframes move-saucer-down {
   from {
     transform: translateY(-100vh);
   }
@@ -313,6 +414,8 @@ i.fas, i.fab {
     transform: translateY(0);
   }
 }
+
+/* animation for top saucer 'lights' */
 
 @keyframes saucer-lights {
   from {
@@ -323,41 +426,4 @@ i.fas, i.fab {
   }
 }
 
-/* Media Queries */
-
-/* Responsive layout for screens smaller than 490px */
-
-@media screen and (max-width: 490px) {
-  .nav-item {
-    margin-right: 1rem;
-    letter-spacing: 2px;
-    margin-left: -2px;
-  }
-  .nav-link {
-    font-size: 1.6rem;
-    font-family: var(--body-font);
-    text-transform: uppercase;
-    color: #FFF;
-  }
-  .content {
-    grid-template-columns: 90vw;
-    grid-template-rows: 35vh;
-    gap: 40px;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-  }
-  .content-details>h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-  .social-links {
-    position: relative;
-    bottom: -20px;
-    display: flex;
-    width: 100%;
-    margin-top: 0;
-    z-index: 1000;
-    justify-content: space-around;
-  }
-}
+/***************************************************************/
