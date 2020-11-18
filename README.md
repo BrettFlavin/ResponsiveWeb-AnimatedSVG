@@ -38,7 +38,11 @@
 
 ## About The Project
 
-This just started off as a joke, but the intent was to learn more about CSS and animations in particular. To do this, I first located an open-source illustration that I could download as an SVG. Next, I took the SVG image and opened it up in Figma. Here, changes can be made to the shapes, paths, vectors, etc. that make up the image. I made the changes I wanted, grouped and named each section that I wanted to animate with CSS, and then exported the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be acessed with CSS and animated. The SVG info gets embedded inline inside the HTML file with the svg tag.
+This just started off as a joke, but the intent was to learn more about responsive web design, CSS, and animations in particular. 
+
+To do this, I first located an open-source illustration and downloaded it as an SVG. Next, I took this SVG image and opened it up in Figma. Here, changes can be made to the shapes, paths, colors, etc. that make up the image. I made the changes I wanted, grouped and named each section that will be animated with CSS, and then exported the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be accessed with CSS and animated. 
+
+The SVG can be simply be transferred into the project folder and once it's opened in VS code you can see all the SVG information for each path including the ids from Figma. Simply copy/paste this info and then it can be embedded directly into the HTML file with the inline svg tag.
 
 <!---------------->
 <!-- BUILT WITH -->
