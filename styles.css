@@ -342,9 +342,7 @@ i.fas, i.fab {
   .email input {
     font-size: 1.4rem;
   }
-  .email-btn {
-    text-
-  }
+  .email-btn {}
 }
 
 /* layout for screens less than 490px */

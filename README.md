@@ -38,11 +38,11 @@
 
 ## About The Project
 
-This just started off as a joke, but the intent was to learn more about responsive web design, CSS, and animations in particular. 
+This just started off as a joke, but the intent was to learn more about responsive web design, CSS, and animations in particular.
 
-To do this, I first located an open-source illustration and downloaded it as an SVG. Next, I took this SVG image and opened it up in Figma. Here, changes can be made to the shapes, paths, colors, etc. that make up the image. I made the changes I wanted, grouped and named each section that will be animated with CSS, and then exported the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be accessed with CSS and animated. 
+To do this, I first located an open-source illustration and downloaded it as an SVG. Next, I took this SVG image and opened it up in Figma. Here, changes can be made to the shapes, paths, colors, etc. that make up the image. I made the changes I wanted, grouped and named each section that will be animated with CSS, and then exported the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be accessed with CSS and animated.
 
-The SVG can be simply be transferred into the project folder and once it's opened in VS code you can see all the SVG information for each path including the ids from Figma. Simply copy/paste this info and then it can be embedded directly into the HTML file with the inline svg tag.
+The SVG can be simply be transferred into the project folder and once it's opened in VS code you can see all the SVG information for each path including the ids from Figma. Simply copy/paste this info and embed it directly into the HTML file with the inline svg tag. The different paths that make up the image are accessed and animated by the CSS through their unique ids. The animation simply moves the saucer down into place on the page, and then fades the opacity properties of the top saucer lights and the bottom green lights back and forth from 0 to 1 in an infinite loop, in order to give the twinkling effect.
 
 <!---------------->
 <!-- BUILT WITH -->
