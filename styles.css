@@ -7,15 +7,13 @@
 
 :root {
   --main-font: "Oswald", san-serif;
-  --body-font: "Turret Road", cursive;
+  --link-font: "Turret Road", cursive;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-
-body {}
 
 a {
   text-decoration: none;
@@ -54,7 +52,7 @@ i.fas, i.fab {
   text-shadow: 0px 0px 5px rgba(226, 202, 182, 1);
 }
 
-/**************** N A V I G A T I O N  ****************/
+/*********************** N A V I G A T I O N  *************************/
 
 .nav {
   display: flex;
@@ -81,7 +79,7 @@ i.fas, i.fab {
 .nav-link {
   opacity: 1;
   font-size: 2rem;
-  font-family: var(--body-font);
+  font-family: var(--link-font);
   text-transform: uppercase;
   color: #FFF;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
@@ -92,7 +90,7 @@ i.fas, i.fab {
   opacity: .5;
 }
 
-/***************** M A I N section *****************/
+/************************* M A I N content *************************/
 
 .main {
   width: 100%;
@@ -139,24 +137,22 @@ i.fas, i.fab {
 .content-details>h1 {
   font-size: 5rem;
   font-family: var(--main-font);
-  color: rgb(131, 28, 28);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, .75);
   text-align: left;
+  color: #dd3e0d;
+  text-shadow: 1px 1px 0px #fd0000, 4px 3px 0px rgba(0, 0, 0, 0.15), 3px 3px 5px rgba(255, 255, 255, .7);
 }
 
 .content-details>p {
   font-size: 2rem;
-  font-family: var(--main-font), sans-serif;
-  color: rgba(226, 202, 182, 1);
-  text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
-  letter-spacing: 1px;
-  margin-left: -1px;
+  font-family: var(--link-font), sans-serif;
+  color: rgba(78, 36, 25, 0.692);
+  text-shadow: 0px 0px 3px rgba(202, 115, 2, 0.747);
   text-align: justify;
   justify-content: center;
   margin: 2rem auto;
 }
 
-/* styling for both the text field and the btn */
+/* styling for both the email text field and the btn */
 
 .email {
   text-align: center;
@@ -206,10 +202,9 @@ i.fas, i.fab {
   margin-right: 0;
 }
 
-/* 
 .social-links .link i:active, .social-links .link i:hover {
   opacity: .4;
-} */
+}
 
 /* container for animated SVG image */
 
@@ -335,6 +330,23 @@ i.fas, i.fab {
 
 /********************* Media Queries *********************/
 
+/* layout for screens less than 550px */
+
+@media screen and (max-width: 580px) {
+  .content-details>h1 {
+    font-size: 3.5rem;
+  }
+  .content-details>p {
+    font-size: 1.6rem;
+  }
+  .email input {
+    font-size: 1.4rem;
+  }
+  .email-btn {
+    text-
+  }
+}
+
 /* layout for screens less than 490px */
 
 @media screen and (max-width: 490px) {
@@ -358,8 +370,6 @@ i.fas, i.fab {
     justify-content: center;
   }
   .content-details>p {
-    font-size: 1.6rem;
-    letter-spacing: 0;
     margin: 0 0 1rem 0;
     padding: 1rem 3.5rem;
   }
