@@ -68,7 +68,7 @@ Some of the techniques I used here include CSS flexbox and grid, CSS animations,
 
 <h4>responsive web design for laptop and mobile devices:</h4>
 
-<img src="mars-alien2.gif" width="50%">
+<img src="mars-alien2.gif" width="70%">
 <br>
 <br>
 
