@@ -6,19 +6,17 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 
-<!------------------>
-<!-- PROJECT LOGO -->
-<!------------------>
+<!-------------------------->
+<!-- PROJECT HEADING/LOGO -->
+<!-------------------------->
 <br />
-<p align="center">
-  <h1>Animated SVG using CSS</h1>
-  <h3>README</h3>
-  <p>    
+  <h1 align="center">Animated SVG using CSS</h1>
+  <h3 align="center">README</h3>
+  <p align="center">    
     <a href="https://github.com/BrettFlavin/ResponsiveWeb-AnimatedSVG/issues">Report Bug</a>
     ·
     <a href="https://github.com/BrettFlavin/ResponsiveWeb-AnimatedSVG/issues">Request Feature</a>
   </p>
-</p>
 
 <!----------------------->
 <!-- TABLE OF CONTENTS -->
@@ -40,9 +38,11 @@
 
 This just started off as a joke, but the intent was to learn more about responsive web design, CSS, and animations in particular.
 
-To do this, I first located an open-source illustration and downloaded it as an SVG. Next, I took this SVG image and opened it up in Figma. Here, changes can be made to the shapes, paths, colors, etc. that make up the image. I made the changes I wanted, grouped and named each section that will be animated with CSS, and then exported the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be accessed with CSS and animated.
+To do this, I first located an open-source illustration and downloaded it as an SVG. Next, I took this SVG image and opened it up in Figma where changes can be made to the individual shapes, paths, colors, etc that make up the image. After making changes, group together and name the sections of the SVG to be animated with CSS, and export the file from Figma as an SVG. In Figma, you must ensure to click the checkbox 'include id attribute' before exporting the SVG. Now, each section of the image has an id tag that can be accessed with CSS and animated.
 
-The SVG can be simply be transferred into the project folder and once it's opened in VS code you can see all the SVG information for each path including the ids from Figma. Simply copy/paste this info and embed it directly into the HTML file with the inline svg tag. The different paths that make up the image are accessed and animated by the CSS through their unique ids. The animation simply moves the saucer down into place on the page, and then fades the opacity properties of the top saucer lights and the bottom green lights back and forth from 0 to 1 in an infinite loop, in order to give the twinkling effect.
+After the SVG is copied into the project folder and opened in VS code, you can see all the path and fill information that makes up the SVG image, and also the ids created in Figma. Copy/Paste all of this and embed it directly into the HTML file with the inline svg tag. The different paths of the image can now be accessed and animated by the CSS through their unique ids. 
+
+The animation I created simply moves the saucer down onto the page when it's loaded, and then fades the opacity properties of the top saucer lights and it's bottom green lights back and forth from 0 to 1 in an infinite loop, which gives the twinkling effect. The top saucer dome and the front of the saucer also have unique ids for animation although they were not used here.
 
 <!---------------->
 <!-- BUILT WITH -->
@@ -50,7 +50,7 @@ The SVG can be simply be transferred into the project folder and once it's opene
 
 ### Built With
 
-This application was created in VS Code using HTML and CSS. The alien image was found online and edited using Figma. A CDN was used to import the font awesome reddit alien icon. This project is in the style of a landing-page or single page web site and been made responsive for different size devices.
+This application was created in VS Code using HTML and CSS. The alien image was found online and edited using Figma. A CDN was used to import the font awesome reddit alien icon. This project was created in the style of a landing-page or single page website and been made responsive for different size devices.
 
 Some of the techniques I used here include CSS flexbox and grid, CSS animations, and animation delays to animate individual paths of an SVG image. CSS Media queries were then used to make the page responsive between a laptop and a smaller mobile device.
 
@@ -60,15 +60,15 @@ Some of the techniques I used here include CSS flexbox and grid, CSS animations,
 
 ## Usage
 
-the animated SVG image:
+<h4>the animated SVG image:</h4>
 
-<img src="mars-alien.gif" width="70%">
+<img src="mars-alien.gif" width="75%">
 <br>
 <br>
 
-responsive web design for laptop and mobile devices:
+<h4>responsive web design for laptop and mobile devices:</h4>
 
-<img src="mars-alien2.gif" width="70%">
+<img src="mars-alien2.gif" width="50%">
 <br>
 <br>
 
