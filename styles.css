@@ -132,6 +132,7 @@ i.fas, i.fab {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
+  width: calc(100%-400px);
 }
 
 .content-details>h1 {
@@ -148,7 +149,7 @@ i.fas, i.fab {
   color: rgba(78, 36, 25, 0.692);
   text-shadow: 0px 0px 3px rgba(202, 115, 2, 0.747);
   text-align: justify;
-  justify-content: center;
+  text-justify: distribute;
   margin: 2rem auto;
 }
 
@@ -212,7 +213,9 @@ i.fas, i.fab {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 400px;
   width: 100%;
+  height: auto;
 }
 
 /* SVG has #ids to animate aliens, beams, lights and saucer*/
@@ -332,22 +335,27 @@ i.fas, i.fab {
 
 /* layout for screens less than 550px */
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 870px) {
   .content-details>h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
   }
   .content-details>p {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
   .email input {
     font-size: 1.4rem;
   }
-  .email-btn {}
+  .image-group {
+    min-width: 300px;
+  }
+  i.fas, i.fab {
+    font-size: 2.5rem;
+  }
 }
 
-/* layout for screens less than 490px */
+/* layout for screens less than 540px */
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 540px) {
   .nav {
     height: 3rem;
   }
@@ -367,16 +375,14 @@ i.fas, i.fab {
     align-items: center;
     justify-content: center;
   }
+  .content-details h1{
+    font-size: 3rem;
+    line-height: 3.4rem;
+  }
   .content-details>p {
+    font-size: 1.6;
     margin: 0 0 1rem 0;
     padding: 1rem 3.5rem;
-  }
-  .content-details>h1 {
-    font-size: 3rem;
-    text-align: center;
-  }
-  i.fas, i.fab {
-    font-size: 2.5rem;
   }
   .email input {
     font-size: 1.4rem;
